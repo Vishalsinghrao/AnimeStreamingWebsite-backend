@@ -13,20 +13,10 @@ import protectedRouter from './routes/Protectedrouter.js';
 const app = express()
 app.use(express.json())
 dotenv.config();
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://anime-streaming-website-cyzpqmi9k-vishals-projects-05b27564.vercel.app',
-  'https://anime-streaming-website-s6koa4p16-vishals-projects-05b27564.vercel.app'
-];
+const cors = require("cors");
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: "http://localhost:5173",
   credentials: true
 }));
 app.use(cookieParser());

@@ -36,6 +36,7 @@ app.get('/api/anime', async (req, res) => {
   const data = await response.json();
   res.json(data);
 });
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 
 app.get('/video', (req, res) => {

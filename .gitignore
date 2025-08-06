@@ -1,0 +1,23 @@
+
+
+# === Ignore built files ===
+build/
+dist/
+
+# === Ignore client-specific files ===
+client/node_modules/
+client/.env
+client/src/assets/
+
+# === Ignore server-specific files ===
+server/node_modules/
+server/.env
+server/uploads/
+server/temp/
+
+# === Root-level ===
+node_modules/
+.env
+
+
+.vite/
